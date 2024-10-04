@@ -27,10 +27,11 @@ jobs:
 
       # Runs a single command using the runners shell
       - name: Run a one-line script
-        run: powershell.exe -executionpolicy bypass echo Hello, world!
+        run: |
+          powershell -ExecutionPolicy Bypass -Command "echo 'Hello, World!'"
 
       # Runs a set of commands using the runners shell
       - name: Run a multi-line script
         run: |
-          echo Add other actions to build,
-          echo test, and deploy your project.
+          powershell -ExecutionPolicy Bypass -Command "echo Add other actions to build,"
+          powershell -ExecutionPolicy Bypass -Command "echo test, and deploy your project."
