@@ -1,0 +1,8 @@
+- name: Run tasks on Windows
+  hosts: windows
+  tasks:
+    - name: Create file
+        ansible.builtin.copy:
+        dest: C:\temp\file.txt
+        content: |
+          This is the content of the file.
